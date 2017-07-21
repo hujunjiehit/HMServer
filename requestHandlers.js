@@ -10,7 +10,7 @@ function start(request,response) {
     exec("find /",  
         { timeout: 10000, maxBuffer: 20000*1024 },  
         function (error, stdout, stderr) {  
-            response.writeHead(200, {"Content-Type": "text/plain"});  
+	    response.writeHead(200, {"Content-Type": "text/plain"});  
             response.write(stdout);  
             response.end();  
         }  
@@ -33,7 +33,7 @@ function upload(request,response) {
 
 		 response.writeHead(200, {"Content-Type": "json"}); 
 	    if(userType >= 1) {
-	    	if(dataObject.appVersion < 430){
+	    	if(appVersion < 430){
 	        	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本4.3.0（去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
 	    	}else {
 	        	response.write(JSON.stringify({ status:"ok",message:"验证成功"}));  	
