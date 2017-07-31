@@ -32,7 +32,7 @@ function upload(request,response) {
 	    var userType = user.get("userType");
 
 		 response.writeHead(200, {"Content-Type": "json"}); 
-		 if(username == "18002570032"){
+		 if(username == ""){
 		 	response.write(JSON.stringify({ status:"failed",message:"恶意诋毁软件，进行封号处理"}));  
 		 }else{
 		 	if(userType >= 1) {
