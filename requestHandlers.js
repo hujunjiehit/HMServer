@@ -36,8 +36,8 @@ function upload(request,response) {
 		 	response.write(JSON.stringify({ status:"failed",message:"恶意诋毁软件，进行封号处理"}));  
 		 }else{
 		 	if(userType >= 1) {
-		    	if(appVersion < 430){
-		        	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本4.3.0（去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
+		    	if(appVersion < 460){
+		        	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本4.6.0（去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
 		    	}else {
 		        	response.write(JSON.stringify({ status:"ok",message:"验证成功"}));  	
 	        	}
