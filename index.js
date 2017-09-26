@@ -6,7 +6,7 @@ var handle = {};
 handle["/"] = requestHandlers.start; 
 handle["/start"] = requestHandlers.start;  
 handle["/upload"] = requestHandlers.upload;
-handle["/getPermission"] = requestHandlers.getPermission;
+handle["/getPayPermission"] = requestHandlers.getPayPermission;
 
 handle["/getTonglianPageInfo"] = requestHandlers.getTonglianPageInfo;
 handle["/getKuaiqianPageInfo"] = requestHandlers.getKuaiqianPageInfo;
