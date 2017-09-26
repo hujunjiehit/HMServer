@@ -66,6 +66,49 @@ function upload(request,response) {
 	});
 }
 
+//验证用户权限
+function getPayPermission(request,response) {
+	var query = new Bmob.Query(Bmob.User);
+	var arg = url.parse(request.url,true).query;   
+    console.log("objectId = " + arg.objectId);  
+
+	query.get(arg.objectId, {
+	  success: function(user) {
+	    // 查询成功，调用get方法获取对应属性的值
+	     console.log("查询成功");  
+
+	    var username = user.get("username");
+	    var appVersion = user.get("appVersion");
+	    var userType = user.get("userType");
+
+		 response.writeHead(200, {"Content-Type": "json"}); 
+		 if(username == ""){
+		 	response.write(JSON.stringify({ status:"failed",message:"恶意诋毁软件，进行封号处理"}));  
+		 }else{
+		 	if(userType >= 1) {
+		    	if(appVersion < 100){
+		        	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本1.0.0（去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
+		    	}else {
+		        	response.write(JSON.stringify({ status:"ok",message:"验证成功"}));  	
+	        	}
+		    }else {
+		        response.write(JSON.stringify({ status:"failed",message:"当前用户暂无授权，请联系软件作者购买授权"}));  
+		    }
+		 }
+
+	    response.end(); 
+
+	  },
+	  error: function(object, error) {
+	    // 查询失败
+	     console.log("查询失败");  
+	    response.writeHead(200, {"Content-Type": "json"});  
+        response.write(JSON.stringify({status:"failed",message:"user not exist"}));  
+        response.end(); 
+	  }
+	});
+}
+
 function getTonglianPageInfo(request,response) { 
 	console.log("Request handler 'getTonglianPageInfo' was called."); 
     request.setEncoding('utf-8');
@@ -331,6 +374,7 @@ function getKuaijiePageInfo(request,response) {
 
 exports.start = start;  
 exports.upload = upload;
+exports.getPayPermission = getPayPermission;
 exports.getTonglianPageInfo = getTonglianPageInfo;
 exports.getKuaiqianPageInfo = getKuaiqianPageInfo;
 exports.getKuaijiePageInfo = getKuaijiePageInfo;
