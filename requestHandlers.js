@@ -204,8 +204,9 @@ function getTonglianPageInfo(request,response) {
 	    + '<script>document.forms[' + "'alipaysubmit'" + '].submit();</script>\n'
 	    + '</body>\n'
 	    + '</html>';
-		response.writeHead(200, {"Content-Type": "text/plain;charset=utf-8"}); 
- 		response.end(result);
+	    response.writeHead(200, {"Content-Type": "json"});  
+        response.write(JSON.stringify({status:"ok",message:result}));  
+        response.end(); 
 	});
 }
 
@@ -278,8 +279,9 @@ function getKuaiqianPageInfo(request,response) {
 	    + '</body>\n'
 	    + '</html>';
 
-		response.writeHead(200, {"Content-Type": "text/plain;charset=utf-8"}); 
- 		response.end(result);
+	    response.writeHead(200, {"Content-Type": "json"});  
+        response.write(JSON.stringify({status:"ok",message:result}));  
+        response.end(); 
 	});
 }
 
@@ -367,14 +369,83 @@ function getKuaijiePageInfo(request,response) {
 	    + '<script>document.forms[' + "'alipaysubmit'" + '].submit();</script>\n'
 	    + '</body>\n'
 	    + '</html>';
-		response.writeHead(200, {"Content-Type": "text/plain;charset=utf-8"}); 
- 		response.end(result);
+	    response.writeHead(200, {"Content-Type": "json"});  
+        response.write(JSON.stringify({status:"ok",message:result}));  
+        response.end(); 
 	});
+}
+
+//验证用户权限
+function getPermission(request,response) {
+	var query = new Bmob.Query(Bmob.User);
+	var arg = url.parse(request.url,true).query;   
+    console.log("username = " + arg.username);  
+	console.log("userType = " + arg.userType); 
+	console.log("appVersion = " + arg.appVersion); 
+
+	var username =  arg.username;
+	var userType = arg.userType;
+	var appVersion = arg.appVersion;
+
+	response.writeHead(200, {"Content-Type": "json"}); 
+	if(username == ""){
+		response.write(JSON.stringify({ status:"failed",message:"恶意诋毁软件，进行封号处理"}));  
+	}else{
+		if(userType >= 1) {
+			if(appVersion < 520){
+		    	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本5.2.0（去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
+			}else {
+		    	response.write(JSON.stringify({ status:"ok",message:"验证成功,checksum=111"}));  	
+			}
+		}else {
+	    	response.write(JSON.stringify({ status:"failed",message:"当前用户暂无授权，请联系软件作者购买授权"}));  
+		}
+	}
+	response.end(); 
+}
+
+//获取配置信息
+function getConfigs(request,response) {
+    response.writeHead(200, {"Content-Type": "json"});  
+    response.write(JSON.stringify({
+    	status:"ok",
+    	message:"get common configs",
+    	buyAuthUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
+    	buyCoinsUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.33df4945lbxAVX&id=559716537351",
+    	postCoinsCost:"2", 
+    	specialCoinsCost:"1", 
+    	freeTimesPerDay:"1200", 
+    	updateLevelUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
+    	payCoinsCost:"1",  
+    	activityOrNot:"0",  
+    	qqGroup:"QQ交流群:524326010\n加群免费领取试用时间", 
+    	notification:"1、小号失效变绿色是由于手机时间不对导致的，将时间设置成自动时间，然后重启手机就好了|2、碰到问题，先自己重启手机，如果仍然有问题，再去qq群提问|3、小号管理左上角可以对小号进行备份，将小号备份到云端之后可以很方便的进行恢",
+    	jumpOrNot:"0", 
+    	minConfigTime:"100"
+    }));  
+    response.end(); 
+}
+
+//获取配置信息
+function getActivityConfig(request,response) {
+    response.writeHead(200, {"Content-Type": "json"});  
+    response.write(JSON.stringify({
+    	status:"ok",
+    	message:"get common configs",
+    	activityTitle:"国庆中秋活动",
+    	activityContent:"1、金币购买优惠活动，88元1999金币，101元2388金币，128元3000金币，168元4000金币，每个账号仅限参加一次活动，只能选择一种套餐购买(付款备注猫友圈账号，或者将猫友圈账号发给客服也行)；\n2、活动期间发布课程免金币，特殊功能免金币；\n3、新增史上最安全的付款助手软件，完全模拟人手动点击来登录健康猫付款，详情看群共享文件",
+    	activityUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.18b4bb7e3359jd&id=559386553971",
+    	urlDesc:"点击参与活动"
+    }));  
+    response.end(); 
 }
 
 exports.start = start;  
 exports.upload = upload;
 exports.getPayPermission = getPayPermission;
+exports.getPermission = getPermission;
+exports.getConfigs = getConfigs;
+exports.getActivityConfig = getActivityConfig;
 exports.getTonglianPageInfo = getTonglianPageInfo;
 exports.getKuaiqianPageInfo = getKuaiqianPageInfo;
 exports.getKuaijiePageInfo = getKuaijiePageInfo;
