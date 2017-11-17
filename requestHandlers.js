@@ -418,10 +418,19 @@ function getConfigs(request,response) {
     	updateLevelUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
     	payCoinsCost:"1",  
     	activityOrNot:"0",  
-    	qqGroup:"QQ交流群:524326010\n加群免费领取试用时间", 
+    	qqGroup:"524326010", 
     	notification:"1、小号失效变绿色是由于手机时间不对导致的，将时间设置成自动时间，然后重启手机就好了|2、碰到问题，先自己重启手机，如果仍然有问题，再去qq群提问|3、小号管理左上角可以对小号进行备份，将小号备份到云端之后可以很方便的进行恢",
     	jumpOrNot:"0", 
-    	minConfigTime:"100"
+    	minConfigTime:"0",
+    	enableGiveCoins:1,
+    	notice:{
+    		content:"全自动付款独立成单独的app请加群重新下载",
+    		url:"",
+    		autoDismiss:true,
+    		autoDissmissDuration:2000,
+    		showIndicator:false,
+    		enable:1
+    	}
     }));  
     response.end(); 
 }
@@ -440,11 +449,87 @@ function getActivityConfig(request,response) {
     response.end(); 
 }
 
+//获取配置信息
+function getModuleConfig(request,response) {
+    response.writeHead(200, {"Content-Type": "json"});  
+    response.write(JSON.stringify({
+    	status:"ok",
+    	ret:[
+    	{
+    		moduleName:"全自动付款",
+	    	moduleContent:"全自动付款独立成一个单独的app，请加群重新下载",
+	    	url:"",
+	    	urlDesc:"点击购买小号",
+	    	order:0,
+	    	enable:1
+    	},
+    	{
+    		moduleName:"健康猫小号",
+	    	moduleContent:"健康猫小号，0.5元一个，有积分，拍下之后自动发货",
+	    	url:"http://h5.m.taobao.com/awp/core/detail.htm?spm=686.1000925.0.0.65ecc7c93DZqLU&id=561356305917",
+	    	urlDesc:"点击购买小号",
+	    	order:0,
+	    	enable:0
+    	},
+  		{
+  			moduleName:"金币自动充值",
+	    	moduleContent:"购买金币充值卡密可以自己充值金币",
+	    	url:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.136dba14VlRFuA&id=559716537351",
+	    	urlDesc:"点击购买卡密",
+	    	order:1,
+	    	enable:1
+    	},
+    	{
+  			moduleName:"常见问题：小号变绿色",
+	    	moduleContent:"小号失效变绿色是由于手机时间不对导致的，将时间设置成自动时间，然后重启手机就好了",
+	    	url:"",
+	    	urlDesc:"点击参与活动",
+	    	order:2,
+	    	enable:1
+    	},
+    	{
+  			moduleName:"小技巧：备份小号",
+	    	moduleContent:"小号管理左上角，可以备份小号到云端，换手机之后，直接从云端恢复小号即可",
+	    	url:"",
+	    	urlDesc:"点击参与活动",
+	    	order:3,
+	    	enable:1	
+    	},
+    	{
+  			moduleName:"小技巧：获取金币",
+	    	moduleContent:"邀请人开通永久，系统会自动赠送1888金币，让对方注册的时候，邀请人写你的猫友圈登录账号",
+	    	url:"",
+	    	urlDesc:"点击参与活动",
+	    	order:4,
+	    	enable:1
+    	},
+    	 {
+  			moduleName:"小技巧：设置约课评价速度",
+	    	moduleContent:"功能列表右上角，可以设置延迟，随心所欲的控制约课评价速度，想快就快，想慢就慢",
+	    	url:"",
+	    	urlDesc:"点击参与活动",
+	    	order:5,
+	    	enable:1
+    	},
+    	 {
+  			moduleName:"自动评价演示视频",
+	    	moduleContent:"下方是演示视频",
+	    	url:"http://v.youku.com/v_show/id_XMTg4NzM3Njg2MA==.html?sharefrom=iphone&sharekey=b1a2e33cf32612e12a0c137a3db15e2b8",
+	    	urlDesc:"点击观看视频",
+	    	order:99,
+	    	enable:0
+    	}
+    	]
+    }));  
+    response.end(); 
+}
+
 exports.start = start;  
 exports.upload = upload;
 exports.getPayPermission = getPayPermission;
 exports.getPermission = getPermission;
 exports.getConfigs = getConfigs;
+exports.getModuleConfig = getModuleConfig;
 exports.getActivityConfig = getActivityConfig;
 exports.getTonglianPageInfo = getTonglianPageInfo;
 exports.getKuaiqianPageInfo = getKuaiqianPageInfo;

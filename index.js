@@ -11,6 +11,7 @@ handle["/upload"] = requestHandlers.upload;
 handle["/getPermission"] = requestHandlers.getPermission;
 handle["/getPayPermission"] = requestHandlers.getPayPermission;
 handle["/getConfigs"] = requestHandlers.getConfigs;
+handle["/getModuleConfig"] = requestHandlers.getModuleConfig;
 handle["/getActivityConfig"] = requestHandlers.getActivityConfig;
 
 handle["/getTonglianPageInfo"] = requestHandlers.getTonglianPageInfo;
