@@ -429,7 +429,7 @@ function getConfigs(request,response) {
     		autoDismiss:true,
     		autoDissmissDuration:2000,
     		showIndicator:false,
-    		enable:1
+    		enable:0
     	}
     }));  
     response.end(); 
@@ -457,7 +457,7 @@ function getModuleConfig(request,response) {
     	ret:[
     	{
     		moduleName:"全自动付款",
-	    	moduleContent:"全自动付款独立成一个单独的app，请加群重新下载",
+	    	moduleContent:"全自动付款独立成一个单独的app，请加qq群653319381下载试用（必须安卓5.0以上的手机才行，最好小米和华为手机）",
 	    	url:"",
 	    	urlDesc:"点击购买小号",
 	    	order:0,
