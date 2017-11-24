@@ -424,12 +424,12 @@ function getConfigs(request,response) {
     	minConfigTime:"0",
     	enableGiveCoins:1,
     	notice:{
-    		content:"全自动付款独立成单独的app请加群重新下载",
-    		url:"",
+    		content:"买手机赠送一个月全自动付款和2888金币,点击查看详情",
+    		url:"https://item.taobao.com/item.htm?id=554740865316",
     		autoDismiss:true,
-    		autoDissmissDuration:2000,
-    		showIndicator:false,
-    		enable:0
+    		autoDissmissDuration:3000,
+    		showIndicator:true,
+    		enable:1
     	}
     }));  
     response.end(); 
@@ -456,10 +456,10 @@ function getModuleConfig(request,response) {
     	status:"ok",
     	ret:[
     	{
-    		moduleName:"全自动付款",
-	    	moduleContent:"全自动付款独立成一个单独的app，请加qq群653319381下载试用（必须安卓5.0以上的手机才行，最好小米和华为手机）",
-	    	url:"",
-	    	urlDesc:"点击购买小号",
+    		moduleName:"买手机优惠活动",
+	    	moduleContent:"买手机赠送一个月全自动付款和2888金币,点击查看详情",
+	    	url:"https://item.taobao.com/item.htm?id=554740865316",
+	    	urlDesc:"点击了解活动",
 	    	order:0,
 	    	enable:1
     	},
@@ -468,15 +468,15 @@ function getModuleConfig(request,response) {
 	    	moduleContent:"健康猫小号，0.5元一个，有积分，拍下之后自动发货",
 	    	url:"http://h5.m.taobao.com/awp/core/detail.htm?spm=686.1000925.0.0.65ecc7c93DZqLU&id=561356305917",
 	    	urlDesc:"点击购买小号",
-	    	order:0,
-	    	enable:0
+	    	order:1,
+	    	enable:1
     	},
   		{
   			moduleName:"金币自动充值",
 	    	moduleContent:"购买金币充值卡密可以自己充值金币",
 	    	url:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.136dba14VlRFuA&id=559716537351",
 	    	urlDesc:"点击购买卡密",
-	    	order:1,
+	    	order:2,
 	    	enable:1
     	},
     	{
@@ -484,7 +484,7 @@ function getModuleConfig(request,response) {
 	    	moduleContent:"小号失效变绿色是由于手机时间不对导致的，将时间设置成自动时间，然后重启手机就好了",
 	    	url:"",
 	    	urlDesc:"点击参与活动",
-	    	order:2,
+	    	order:3,
 	    	enable:1
     	},
     	{
@@ -492,7 +492,7 @@ function getModuleConfig(request,response) {
 	    	moduleContent:"小号管理左上角，可以备份小号到云端，换手机之后，直接从云端恢复小号即可",
 	    	url:"",
 	    	urlDesc:"点击参与活动",
-	    	order:3,
+	    	order:4,
 	    	enable:1	
     	},
     	{
