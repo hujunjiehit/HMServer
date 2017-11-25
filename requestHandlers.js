@@ -429,7 +429,7 @@ function getConfigs(request,response) {
     		autoDismiss:true,
     		autoDissmissDuration:3000,
     		showIndicator:true,
-    		enable:1
+    		enable:0
     	}
     }));  
     response.end(); 
@@ -461,7 +461,7 @@ function getModuleConfig(request,response) {
 	    	url:"https://item.taobao.com/item.htm?id=554740865316",
 	    	urlDesc:"点击了解活动",
 	    	order:0,
-	    	enable:1
+	    	enable:0
     	},
     	{
     		moduleName:"健康猫小号",
