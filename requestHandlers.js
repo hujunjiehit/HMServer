@@ -43,8 +43,8 @@ function upload(request,response) {
 		 	response.write(JSON.stringify({ status:"failed",message:"恶意诋毁软件，进行封号处理"}));  
 		 }else{
 		 	if(userType >= 1) {
-		    	if(appVersion < 520){
-		        	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本5.2.0（去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
+		    	if(appVersion < 540){
+		        	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本（点击版本号，或者去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
 		    	}else {
 		        	response.write(JSON.stringify({ status:"ok",message:"验证成功"}));  	
 	        	}
@@ -86,8 +86,8 @@ function getPayPermission(request,response) {
 		 	response.write(JSON.stringify({ status:"failed",message:"恶意诋毁软件，进行封号处理"}));  
 		 }else{
 		 	if(userType >= 1) {
-		    	if(appVersion < 520){
-		        	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本5.2.0（去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
+		    	if(appVersion < 540){
+		        	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本（点击版本号，或者去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
 		    	}else {
 		        	response.write(JSON.stringify({ status:"ok",message:"验证成功"}));  	
 	        	}
@@ -392,8 +392,8 @@ function getPermission(request,response) {
 		response.write(JSON.stringify({ status:"failed",message:"恶意诋毁软件，进行封号处理"}));  
 	}else{
 		if(userType >= 1) {
-			if(appVersion < 520){
-		    	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本5.2.0（去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
+			if(appVersion < 540){
+		    	response.write(JSON.stringify({ status:"failed",message:"当前版本过低，请更新到最新版本（点击版本号，或者去群共享下载，不要卸载旧的，覆盖安装就行。更新之后还不行的需要重启下手机)"}));  
 			}else {
 		    	response.write(JSON.stringify({ status:"ok",message:"验证成功,checksum=111"}));  	
 			}
@@ -424,12 +424,12 @@ function getConfigs(request,response) {
     	minConfigTime:"0",
     	enableGiveCoins:1,
     	notice:{
-    		content:"买手机赠送一个月全自动付款和2888金币,点击查看详情",
-    		url:"https://item.taobao.com/item.htm?id=554740865316",
+    		content:"月底了，大家不要忘记买两节课私教课，否则下个月没有补贴",
+    		url:"",
     		autoDismiss:true,
     		autoDissmissDuration:3000,
-    		showIndicator:true,
-    		enable:0
+    		showIndicator:false,
+    		enable:1
     	}
     }));  
     response.end(); 
@@ -460,8 +460,8 @@ function getModuleConfig(request,response) {
 	    	moduleContent:"买手机赠送一个月全自动付款和2888金币,点击查看详情",
 	    	url:"https://item.taobao.com/item.htm?id=554740865316",
 	    	urlDesc:"点击了解活动",
-	    	order:0,
-	    	enable:0
+	    	order:1,
+	    	enable:1
     	},
     	{
     		moduleName:"健康猫小号",
@@ -469,6 +469,14 @@ function getModuleConfig(request,response) {
 	    	url:"http://h5.m.taobao.com/awp/core/detail.htm?spm=686.1000925.0.0.65ecc7c93DZqLU&id=561356305917",
 	    	urlDesc:"点击购买小号",
 	    	order:1,
+	    	enable:1
+    	},
+    	{
+    		moduleName:"积分和私教课",
+	    	moduleContent:"月底了，大家不要忘记买两节课私教课和100积分，不然下个月没有补贴",
+	    	url:"",
+	    	urlDesc:"",
+	    	order:0,
 	    	enable:1
     	},
   		{
