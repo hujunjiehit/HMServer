@@ -429,7 +429,7 @@ function getConfigs(request,response) {
     		autoDismiss:true,
     		autoDissmissDuration:3000,
     		showIndicator:false,
-    		enable:1
+    		enable:0
     	}
     }));  
     response.end(); 
@@ -477,7 +477,7 @@ function getModuleConfig(request,response) {
 	    	url:"",
 	    	urlDesc:"",
 	    	order:0,
-	    	enable:1
+	    	enable:0
     	},
   		{
   			moduleName:"金币自动充值",
