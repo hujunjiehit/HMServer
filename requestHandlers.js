@@ -423,6 +423,7 @@ function getConfigs(request,response) {
     	jumpOrNot:"0", 
     	minConfigTime:"0",
     	enableGiveCoins:1,
+    	maxCourses:200,
     	notice:{
     		content:"月底了，大家不要忘记买两节课私教课，否则下个月没有补贴",
     		url:"",
