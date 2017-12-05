@@ -462,12 +462,12 @@ function getModuleConfig(request,response) {
 	    	url:"https://item.taobao.com/item.htm?id=554740865316",
 	    	urlDesc:"点击了解活动",
 	    	order:1,
-	    	enable:1
+	    	enable:0
     	},
     	{
     		moduleName:"健康猫小号",
 	    	moduleContent:"健康猫小号，0.5元一个，有积分，拍下之后自动发货",
-	    	url:"http://h5.m.taobao.com/awp/core/detail.htm?spm=686.1000925.0.0.65ecc7c93DZqLU&id=561356305917",
+	    	url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.39111a70tVEZ9Z&id=562296312600",
 	    	urlDesc:"点击购买小号",
 	    	order:1,
 	    	enable:1
@@ -486,7 +486,7 @@ function getModuleConfig(request,response) {
 	    	url:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.136dba14VlRFuA&id=559716537351",
 	    	urlDesc:"点击购买卡密",
 	    	order:2,
-	    	enable:1
+	    	enable:0
     	},
     	{
   			moduleName:"常见问题：小号变绿色",
