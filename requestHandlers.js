@@ -412,25 +412,25 @@ function getConfigs(request,response) {
     	message:"get common configs",
     	buyAuthUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
     	buyCoinsUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.33df4945lbxAVX&id=559716537351",
-    	postCoinsCost:"2", 
-    	specialCoinsCost:"1", 
+    	postCoinsCost:"0", 
+    	specialCoinsCost:"0", 
     	freeTimesPerDay:"1200", 
     	updateLevelUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
     	payCoinsCost:"1",  
     	activityOrNot:"0",  
     	qqGroup:"524326010", 
     	notification:"1、小号失效变绿色是由于手机时间不对导致的，将时间设置成自动时间，然后重启手机就好了|2、碰到问题，先自己重启手机，如果仍然有问题，再去qq群提问|3、小号管理左上角可以对小号进行备份，将小号备份到云端之后可以很方便的进行恢",
-    	jumpOrNot:"0", 
+    	jumpOrNot:"1", 
     	minConfigTime:"0",
-    	enableGiveCoins:1,
+    	enableGiveCoins:0,
     	maxCourses:200,
     	notice:{
-    		content:"月底了，大家不要忘记买两节课私教课，否则下个月没有补贴",
-    		url:"",
+    		content:"双十二金币优惠活动",
+    		url:"https://item.taobao.com/item.htm?id=559386553971",
     		autoDismiss:true,
     		autoDissmissDuration:3000,
-    		showIndicator:false,
-    		enable:0
+    		showIndicator:true,
+    		enable:1
     	}
     }));  
     response.end(); 
@@ -457,28 +457,36 @@ function getModuleConfig(request,response) {
     	status:"ok",
     	ret:[
     	{
-    		moduleName:"买手机优惠活动",
-	    	moduleContent:"买手机赠送一个月全自动付款和2888金币,点击查看详情",
-	    	url:"https://item.taobao.com/item.htm?id=554740865316",
-	    	urlDesc:"点击了解活动",
-	    	order:1,
-	    	enable:0
+    		moduleName:"双十二金币优惠活动",
+	    	moduleContent:"购买之后，自动发金币充值卡密，前往猫友圈->个人中心->点击金币余额进行充值",
+	    	url:"https://item.taobao.com/item.htm?id=559386553971",
+	    	urlDesc:"点击参与活动",
+	    	order:0,
+	    	enable:1
     	},
     	{
     		moduleName:"健康猫小号",
 	    	moduleContent:"健康猫小号，0.5元一个，有积分，拍下之后自动发货",
 	    	url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.39111a70tVEZ9Z&id=562296312600",
 	    	urlDesc:"点击购买小号",
-	    	order:1,
+	    	order:2,
 	    	enable:1
     	},
     	{
-    		moduleName:"积分和私教课",
-	    	moduleContent:"月底了，大家不要忘记买两节课私教课和100积分，不然下个月没有补贴",
-	    	url:"",
-	    	urlDesc:"",
+    		moduleName:"双十二升级高级活动",
+	    	moduleContent:"双十二期间，普通永久只需168元即可升级到高级永久",
+	    	url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.400758ffzSZLsM&id=554740865316",
+	    	urlDesc:"点击升级高级",
 	    	order:0,
-	    	enable:0
+	    	enable:1
+    	},
+    	 {
+    		moduleName:"双十二特殊功能免金币活动",
+	    	moduleContent:"双十二期间，自动发课功能、统计功能、特殊功能免金币",
+	    	url:"",
+	    	urlDesc:"点击升级高级",
+	    	order:1,
+	    	enable:1
     	},
   		{
   			moduleName:"金币自动充值",
