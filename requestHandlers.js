@@ -412,15 +412,15 @@ function getConfigs(request,response) {
     	message:"get common configs",
     	buyAuthUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
     	buyCoinsUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.33df4945lbxAVX&id=559716537351",
-    	postCoinsCost:"0", 
-    	specialCoinsCost:"0", 
+    	postCoinsCost:"2", 
+    	specialCoinsCost:"1", 
     	freeTimesPerDay:"1200", 
     	updateLevelUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
     	payCoinsCost:"1",  
     	activityOrNot:"0",  
     	qqGroup:"524326010", 
     	notification:"1、小号失效变绿色是由于手机时间不对导致的，将时间设置成自动时间，然后重启手机就好了|2、碰到问题，先自己重启手机，如果仍然有问题，再去qq群提问|3、小号管理左上角可以对小号进行备份，将小号备份到云端之后可以很方便的进行恢",
-    	jumpOrNot:"1", 
+    	jumpOrNot:"0", 
     	minConfigTime:"0",
     	enableGiveCoins:0,
     	maxCourses:200,
@@ -430,7 +430,7 @@ function getConfigs(request,response) {
     		autoDismiss:true,
     		autoDissmissDuration:3000,
     		showIndicator:true,
-    		enable:1
+    		enable:0
     	}
     }));  
     response.end(); 
@@ -462,7 +462,7 @@ function getModuleConfig(request,response) {
 	    	url:"https://item.taobao.com/item.htm?id=559386553971",
 	    	urlDesc:"点击参与活动",
 	    	order:0,
-	    	enable:1
+	    	enable:0
     	},
     	{
     		moduleName:"健康猫小号",
@@ -478,7 +478,7 @@ function getModuleConfig(request,response) {
 	    	url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.400758ffzSZLsM&id=554740865316",
 	    	urlDesc:"点击升级高级",
 	    	order:0,
-	    	enable:1
+	    	enable:0
     	},
     	 {
     		moduleName:"双十二特殊功能免金币活动",
@@ -486,7 +486,7 @@ function getModuleConfig(request,response) {
 	    	url:"",
 	    	urlDesc:"点击升级高级",
 	    	order:1,
-	    	enable:1
+	    	enable:0
     	},
   		{
   			moduleName:"金币自动充值",
