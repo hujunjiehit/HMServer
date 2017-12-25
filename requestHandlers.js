@@ -425,12 +425,12 @@ function getConfigs(request,response) {
     	enableGiveCoins:0,
     	maxCourses:200,
     	notice:{
-    		content:"双十二金币优惠活动",
+    		content:"双旦期间开通全自动付款的用户，可以获赠15天试用时间",
     		url:"https://item.taobao.com/item.htm?id=559386553971",
     		autoDismiss:true,
     		autoDissmissDuration:3000,
-    		showIndicator:true,
-    		enable:0
+    		showIndicator:false,
+    		enable:1
     	}
     }));  
     response.end(); 
@@ -457,12 +457,12 @@ function getModuleConfig(request,response) {
     	status:"ok",
     	ret:[
     	{
-    		moduleName:"双十二金币优惠活动",
-	    	moduleContent:"购买之后，自动发金币充值卡密，前往猫友圈->个人中心->点击金币余额进行充值",
-	    	url:"https://item.taobao.com/item.htm?id=559386553971",
+    		moduleName:"双旦活动",
+	    	moduleContent:"活动时间为即日起至2018年1月1日为止，活动期间开通全自动付款的用户，可以获赠15天试用时间",
+	    	url:"",
 	    	urlDesc:"点击参与活动",
 	    	order:0,
-	    	enable:0
+	    	enable:1
     	},
     	{
     		moduleName:"健康猫小号",
