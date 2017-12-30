@@ -412,24 +412,24 @@ function getConfigs(request,response) {
     	message:"get common configs",
     	buyAuthUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
     	buyCoinsUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.33df4945lbxAVX&id=559716537351",
-    	postCoinsCost:"2", 
-    	specialCoinsCost:"1", 
+    	postCoinsCost:"0", 
+    	specialCoinsCost:"0", 
     	freeTimesPerDay:"1200", 
     	updateLevelUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
     	payCoinsCost:"1",  
     	activityOrNot:"0",  
     	qqGroup:"524326010", 
     	notification:"1、小号失效变绿色是由于手机时间不对导致的，将时间设置成自动时间，然后重启手机就好了|2、碰到问题，先自己重启手机，如果仍然有问题，再去qq群提问|3、小号管理左上角可以对小号进行备份，将小号备份到云端之后可以很方便的进行恢",
-    	jumpOrNot:"0", 
+    	jumpOrNot:"1", 
     	minConfigTime:"0",
     	enableGiveCoins:0,
     	maxCourses:200,
     	notice:{
-    		content:"双旦期间开通全自动付款的用户，可以获赠15天试用时间",
-    		url:"https://item.taobao.com/item.htm?id=559386553971",
+    		content:"双旦金币优惠活动开始了(温馨提醒：月底不要忘记两节课私教课)",
+    		url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.685ecb84YsSlNS&id=559386553971",
     		autoDismiss:true,
-    		autoDissmissDuration:3000,
-    		showIndicator:false,
+    		autoDissmissDuration:5000,
+    		showIndicator:true,
     		enable:1
     	}
     }));  
@@ -458,8 +458,8 @@ function getModuleConfig(request,response) {
     	ret:[
     	{
     		moduleName:"双旦活动",
-	    	moduleContent:"活动时间为即日起至2018年1月1日为止，活动期间开通全自动付款的用户，可以获赠15天试用时间",
-	    	url:"",
+	    	moduleContent:"1、金币购买优惠活动，88元1999金币，168元4000金币，238元6000金币，298元8000金币，每个账号仅限参加一次活动，只能选择一种套餐购买\n2、金币购买之后会自动发放金币充值卡密，复制卡密到猫友圈个人中心进行充值即可",
+	    	url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.685ecb84YsSlNS&id=559386553971",
 	    	urlDesc:"点击参与活动",
 	    	order:0,
 	    	enable:1
@@ -481,12 +481,12 @@ function getModuleConfig(request,response) {
 	    	enable:0
     	},
     	 {
-    		moduleName:"双十二特殊功能免金币活动",
-	    	moduleContent:"双十二期间，自动发课功能、统计功能、特殊功能免金币",
+    		moduleName:"元旦特殊功能免金币活动",
+	    	moduleContent:"元旦期间，自动发课功能、统计功能、特殊功能免金币",
 	    	url:"",
 	    	urlDesc:"点击升级高级",
 	    	order:1,
-	    	enable:0
+	    	enable:1
     	},
   		{
   			moduleName:"金币自动充值",
