@@ -425,10 +425,10 @@ function getConfigs(request,response) {
     	enableGiveCoins:0,
     	maxCourses:200,
     	notice:{
-    		content:"双旦金币优惠活动开始了(温馨提醒：月底不要忘记两节课私教课)",
+    		content:"****双旦金币优惠活动****",
     		url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.685ecb84YsSlNS&id=559386553971",
     		autoDismiss:true,
-    		autoDissmissDuration:5000,
+    		autoDissmissDuration:3000,
     		showIndicator:true,
     		enable:1
     	}
