@@ -420,7 +420,7 @@ function getConfigs(request,response) {
     	activityOrNot:"0",  
     	qqGroup:"524326010", 
     	notification:"1、小号失效变绿色是由于手机时间不对导致的，将时间设置成自动时间，然后重启手机就好了|2、碰到问题，先自己重启手机，如果仍然有问题，再去qq群提问|3、小号管理左上角可以对小号进行备份，将小号备份到云端之后可以很方便的进行恢",
-    	jumpOrNot:"1", 
+    	jumpOrNot:"0", 
     	minConfigTime:"0",
     	enableGiveCoins:0,
     	maxCourses:200,
