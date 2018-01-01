@@ -412,8 +412,8 @@ function getConfigs(request,response) {
     	message:"get common configs",
     	buyAuthUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
     	buyCoinsUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.33df4945lbxAVX&id=559716537351",
-    	postCoinsCost:"0", 
-    	specialCoinsCost:"0", 
+    	postCoinsCost:"2", 
+    	specialCoinsCost:"1", 
     	freeTimesPerDay:"1200", 
     	updateLevelUrl:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.3f11c9edBRzPCP&id=554827091968",
     	payCoinsCost:"1",  
@@ -430,7 +430,7 @@ function getConfigs(request,response) {
     		autoDismiss:true,
     		autoDissmissDuration:3000,
     		showIndicator:true,
-    		enable:1
+    		enable:0
     	}
     }));  
     response.end(); 
@@ -462,7 +462,7 @@ function getModuleConfig(request,response) {
 	    	url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.685ecb84YsSlNS&id=559386553971",
 	    	urlDesc:"点击参与活动",
 	    	order:0,
-	    	enable:1
+	    	enable:0
     	},
     	{
     		moduleName:"健康猫小号",
@@ -486,7 +486,7 @@ function getModuleConfig(request,response) {
 	    	url:"",
 	    	urlDesc:"点击升级高级",
 	    	order:1,
-	    	enable:1
+	    	enable:0
     	},
   		{
   			moduleName:"金币自动充值",
@@ -494,7 +494,7 @@ function getModuleConfig(request,response) {
 	    	url:"https://item.taobao.com/item.htm?spm=686.1000925.0.0.136dba14VlRFuA&id=559716537351",
 	    	urlDesc:"点击购买卡密",
 	    	order:2,
-	    	enable:0
+	    	enable:1
     	},
     	{
   			moduleName:"常见问题：小号变绿色",
