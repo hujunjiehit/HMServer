@@ -425,7 +425,7 @@ function getConfigs(request,response) {
     	enableGiveCoins:0,
     	maxCourses:200,
     	notice:{
-    		content:"****双旦金币优惠活动****",
+    		content:"金币优惠活动今天最后一天",
     		url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.685ecb84YsSlNS&id=559386553971",
     		autoDismiss:true,
     		autoDissmissDuration:3000,
@@ -457,7 +457,7 @@ function getModuleConfig(request,response) {
     	status:"ok",
     	ret:[
     	{
-    		moduleName:"双旦活动",
+    		moduleName:"双旦活动最后一天",
 	    	moduleContent:"1、金币购买优惠活动，88元1999金币，168元4000金币，238元6000金币，298元8000金币，每个账号仅限参加一次活动，只能选择一种套餐购买\n2、金币购买之后会自动发放金币充值卡密，复制卡密到猫友圈个人中心进行充值即可",
 	    	url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.685ecb84YsSlNS&id=559386553971",
 	    	urlDesc:"点击参与活动",
