@@ -3,6 +3,7 @@ var router = require("./router");
 var requestHandlers = require("./requestHandlers");
 var bmobHelper = require("./bmobHelper");
 var superrootHelper = require("./superrootHelper");
+var superHelper = require("./superHelper");
 
 var handle = {};  
 handle["/"] = requestHandlers.start; 
@@ -25,4 +26,8 @@ handle["/superroot/getPermission"] = superrootHelper.getPermission;
 handle["/superroot/getConfigs"] = superrootHelper.getConfigs;
 handle["/superroot/getActivityConfig"] = superrootHelper.getActivityConfig;
 
+handle["/superhelper/getPermission"] = superHelper.getPermission;
+handle["/superhelper/getConfigs"] = superHelper.getConfigs;
+handle["/superhelper/getActivityConfig"] = superHelper.getActivityConfig;
+handle["/superhelper/getModuleConfig"] = superHelper.getModuleConfig;
 server.start(router.route,handle);
