@@ -55,8 +55,9 @@ function getConfigs(request,response) {
         minConfigTime:"0",
         enableGiveCoins:0,
         maxCourses:200,
+        tryDays:7,
         notice:{
-            content:"一键提现功能稍后发布",
+            content:"活动期间注册就能免费试用七天",
             url:"",
             autoDismiss:true,
             autoDissmissDuration:3000,
