@@ -55,14 +55,14 @@ function getConfigs(request,response) {
         minConfigTime:"0",
         enableGiveCoins:0,
         maxCourses:200,
-        tryDays:7,
+        tryDays:0,
         notice:{
             content:"活动期间注册就能免费试用七天",
             url:"",
             autoDismiss:true,
             autoDissmissDuration:3000,
             showIndicator:false,
-            enable:1
+            enable:0
         }
     }));  
     response.end(); 
