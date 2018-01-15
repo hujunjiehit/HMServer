@@ -55,14 +55,14 @@ function getConfigs(request,response) {
         minConfigTime:"0",
         enableGiveCoins:0,
         maxCourses:200,
-        tryDays:0,
+        tryDays:3,
         notice:{
-            content:"活动期间注册就能免费试用七天",
+            content:"活动期间注册就能免费试用三天--QQ群：384031653",
             url:"",
             autoDismiss:true,
             autoDissmissDuration:3000,
             showIndicator:false,
-            enable:0
+            enable:1
         }
     }));  
     response.end(); 
