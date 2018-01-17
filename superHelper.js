@@ -55,9 +55,9 @@ function getConfigs(request,response) {
         minConfigTime:"0",
         enableGiveCoins:0,
         maxCourses:200,
-        tryDays:3,
+        tryDays:0,
         notice:{
-            content:"活动期间注册就能免费试用三天--QQ群：384031653",
+            content:"助手QQ交流群：384031653",
             url:"",
             autoDismiss:true,
             autoDissmissDuration:3000,
