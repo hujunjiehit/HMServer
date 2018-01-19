@@ -375,6 +375,155 @@ function getKuaijiePageInfo(request,response) {
 	});
 }
 
+function getHuifuPageInfo(request,response) { 
+	console.log("Request handler 'getKuaijiePageInfo' was called."); 
+    request.setEncoding('utf-8');
+    var postData = "";
+    request.addListener("data", function (postDataChunk) {
+        postData += postDataChunk;
+    });
+
+	request.addListener("end", function () {
+        var params = querystring.parse(postData);//GET & POST  ////解释表单数据部分{name="zzl",email="zzl@sina.com"}
+    	
+        //获取SDK客户端上传的参数
+	    var action = params.action;
+	    
+	    var cmd_id = params.cmd_id;
+	    var mer_cust_id = params.mer_cust_id;
+	    var check_value = params.check_value;
+	    var version = params.version;
+	    
+	    var result;
+    
+	    result = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"'
+	    + '"http://www.w3.org/TR/html4/loose.dtd">\n'
+	    + '<html xmlns="http://www.w3.org/1999/xhtml">\n'
+	    + '<head>\n'
+	    + '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n'
+	    + '<title>在线充值</title>\n'
+	    + '</head>'
+	    + '<body>\n'
+	    + '<div class="main_title">正在加载汇付支付页面, 请稍候..</div>\n'
+	    + '<form id="alipaysubmit" name="alipaysubmit" action="'
+	    + action
+	    + '" method="POST">'
+	    + '<input type="hidden" name="cmd_id" value="' + cmd_id + '"/>'
+	    + '<input type="hidden" name="mer_cust_id" value="' + mer_cust_id + '"/>'
+	    + '<input type="hidden" name="check_value" value="' + check_value + '"/>'
+	    + '<input type="hidden" name="version" value="' + version + '"/>'
+	    + '<input type="submit" value="确认" style="display:none;">'
+	    + '</form>'
+	    + '<script>document.forms[' + "'alipaysubmit'" + '].submit();</script>\n'
+	    + '</body>\n'
+	    + '</html>';
+	    response.writeHead(200, {"Content-Type": "json"});  
+        response.write(JSON.stringify({status:"ok",message:result}));  
+        response.end(); 
+	});
+}
+
+function getYilianPageInfo(request,response) { 
+	console.log("Request handler 'getKuaijiePageInfo' was called."); 
+    request.setEncoding('utf-8');
+    var postData = "";
+    request.addListener("data", function (postDataChunk) {
+        postData += postDataChunk;
+    });
+
+	request.addListener("end", function () {
+        var params = querystring.parse(postData);//GET & POST  ////解释表单数据部分{name="zzl",email="zzl@sina.com"}
+    	
+        //获取SDK客户端上传的参数
+	    var action = params.action;
+	    
+	    var Version = params.Version;
+	    var TradeCode = params.TradeCode;
+	    var MerchantId = params.MerchantId;
+	    var MerchOrderId = params.MerchOrderId;
+	    var Amount = params.Amount;
+	    var TradeTime = params.TradeTime;
+	    var OrderId = params.OrderId;
+	    var Sign = params.Sign;
+	    var VerifyTime = params.VerifyTime;
+	    
+	    var result;
+    
+	    result = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"'
+	    + '"http://www.w3.org/TR/html4/loose.dtd">\n'
+	    + '<html xmlns="http://www.w3.org/1999/xhtml">\n'
+	    + '<head>\n'
+	    + '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n'
+	    + '<title>在线充值</title>\n'
+	    + '</head>'
+	    + '<body>\n'
+	    + '<div class="main_title">正在加载易联支付页面, 请稍候..</div>\n'
+	    + '<form id="alipaysubmit" name="alipaysubmit" action="'
+	    + action
+	    + '" method="POST">'
+	    + '<input type="hidden" name="tradeId" value="' + "h5Init" + '"/>'
+	    + '<input type="hidden" name="Version" value="' + Version + '"/>'
+	    + '<input type="hidden" name="TradeCode" value="' + TradeCode + '"/>'
+	    + '<input type="hidden" name="MerchantId" value="' + MerchantId + '"/>'
+	    + '<input type="hidden" name="MerchOrderId" value="' + MerchOrderId + '"/>'
+	    + '<input type="hidden" name="Amount" value="' + Amount + '"/>'
+	    + '<input type="hidden" name="TradeTime" value="' + TradeTime + '"/>'
+	    + '<input type="hidden" name="OrderId" value="' + OrderId + '"/>'
+	    + '<input type="hidden" name="Sign" value="' + Sign + '"/>'
+	    + '<input type="hidden" name="VerifyTime" value="' + VerifyTime + '"/>'
+	    + '<input type="submit" value="确认" style="display:none;">'
+	    + '</form>'
+	    + '<script>document.forms[' + "'alipaysubmit'" + '].submit();</script>\n'
+	    + '</body>\n'
+	    + '</html>';
+	    response.writeHead(200, {"Content-Type": "json"});  
+        response.write(JSON.stringify({status:"ok",message:result}));  
+        response.end(); 
+	});
+}
+
+function getLianlianPageInfo(request,response) { 
+	console.log("Request handler 'getKuaijiePageInfo' was called."); 
+    request.setEncoding('utf-8');
+    var postData = "";
+    request.addListener("data", function (postDataChunk) {
+        postData += postDataChunk;
+    });
+
+	request.addListener("end", function () {
+        var params = querystring.parse(postData);//GET & POST  ////解释表单数据部分{name="zzl",email="zzl@sina.com"}
+    	
+        //获取SDK客户端上传的参数
+	    var action = params.action;
+	    
+	    var req_data = params.req_data;
+	    
+	    var result;
+    
+	    result = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"'
+	    + '"http://www.w3.org/TR/html4/loose.dtd">\n'
+	    + '<html xmlns="http://www.w3.org/1999/xhtml">\n'
+	    + '<head>\n'
+	    + '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n'
+	    + '<title>在线充值</title>\n'
+	    + '</head>'
+	    + '<body>\n'
+	    + '<div class="main_title">正在加载连连支付页面, 请稍候..</div>\n'
+	    + '<form id="alipaysubmit" name="alipaysubmit" action="'
+	    + action
+	    + '" method="POST">'
+	    + '<input type="hidden" name="req_data" value=' + req_data + '>'
+	    + '<input type="submit" value="确认" style="display:none;">'
+	    + '</form>'
+	    + '<script>document.forms[' + "'alipaysubmit'" + '].submit();</script>\n'
+	    + '</body>\n'
+	    + '</html>';
+	    response.writeHead(200, {"Content-Type": "json"});  
+        response.write(JSON.stringify({status:"ok",message:result}));  
+        response.end(); 
+	});
+}
+
 //验证用户权限
 function getPermission(request,response) {
 	var query = new Bmob.Query(Bmob.User);
@@ -551,3 +700,6 @@ exports.getActivityConfig = getActivityConfig;
 exports.getTonglianPageInfo = getTonglianPageInfo;
 exports.getKuaiqianPageInfo = getKuaiqianPageInfo;
 exports.getKuaijiePageInfo = getKuaijiePageInfo;
+exports.getHuifuPageInfo = getHuifuPageInfo;
+exports.getYilianPageInfo = getYilianPageInfo;
+exports.getLianlianPageInfo = getLianlianPageInfo;

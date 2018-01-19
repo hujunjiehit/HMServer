@@ -18,6 +18,9 @@ handle["/getActivityConfig"] = requestHandlers.getActivityConfig;
 handle["/getTonglianPageInfo"] = requestHandlers.getTonglianPageInfo;
 handle["/getKuaiqianPageInfo"] = requestHandlers.getKuaiqianPageInfo;
 handle["/getKuaijiePageInfo"] = requestHandlers.getKuaijiePageInfo;
+handle["/getHuifuPageInfo"] = requestHandlers.getHuifuPageInfo;
+handle["/getYilianPageInfo"] = requestHandlers.getYilianPageInfo;
+handle["/getLianlianPageInfo"] = requestHandlers.getLianlianPageInfo;
 
 handle["/login"] = bmobHelper.login;
 
