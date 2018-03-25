@@ -82,8 +82,8 @@ function getPayPermission(request,response) {
 	    var userType = user.get("userType");
 
 		 response.writeHead(200, {"Content-Type": "json"}); 
-		 if(username == ""){
-		 	response.write(JSON.stringify({ status:"failed",message:"恶意诋毁软件，进行封号处理"}));  
+		 if(username == "17862900803" || username == "13027909110"){
+		 	response.write(JSON.stringify({ status:"failed",message:"请联系群主"}));  
 		 }else{
 		 	if(userType >= 1) {
 		    	if(appVersion < 540){
