@@ -574,12 +574,12 @@ function getConfigs(request,response) {
     	enableGiveCoins:0,
     	maxCourses:200,
     	notice:{
-    		content:"金币优惠活动今天最后一天",
-    		url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.685ecb84YsSlNS&id=559386553971",
+    		content:"月底提醒一下各位不要忘记两节私教课和100积分",
+    		url:"",
     		autoDismiss:true,
     		autoDissmissDuration:3000,
-    		showIndicator:true,
-    		enable:0
+    		showIndicator:false,
+    		enable:1
     	}
     }));  
     response.end(); 
@@ -622,20 +622,20 @@ function getModuleConfig(request,response) {
 	    	enable:1
     	},
     	{
-    		moduleName:"双十二升级高级活动",
-	    	moduleContent:"双十二期间，普通永久只需168元即可升级到高级永久",
-	    	url:"https://item.taobao.com/item.htm?spm=a1z38n.10677092.0.0.400758ffzSZLsM&id=554740865316",
-	    	urlDesc:"点击升级高级",
+    		moduleName:"关于一键收藏功能",
+	    	moduleContent:"新的小号必须用软件功能列表的一键收藏功能收藏目标私教，才能用软件一键约课",
+	    	url:"",
+	    	urlDesc:"",
 	    	order:0,
-	    	enable:0
+	    	enable:1
     	},
     	 {
-    		moduleName:"元旦特殊功能免金币活动",
-	    	moduleContent:"元旦期间，自动发课功能、统计功能、特殊功能免金币",
+    		moduleName:"关于新号付款失败问题",
+	    	moduleContent:"新的小号必须手动登陆一次健康猫，才能用软件一键付款",
 	    	url:"",
 	    	urlDesc:"点击升级高级",
-	    	order:1,
-	    	enable:0
+	    	order:0,
+	    	enable:1
     	},
   		{
   			moduleName:"金币自动充值",
