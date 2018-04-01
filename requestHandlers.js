@@ -579,7 +579,7 @@ function getConfigs(request,response) {
     		autoDismiss:true,
     		autoDissmissDuration:3000,
     		showIndicator:false,
-    		enable:1
+    		enable:0
     	}
     }));  
     response.end(); 
