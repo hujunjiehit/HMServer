@@ -574,12 +574,12 @@ function getConfigs(request,response) {
     	enableGiveCoins:0,
     	maxCourses:200,
     	notice:{
-    		content:"月底提醒一下各位不要忘记两节私教课和100积分",
+    		content:"小号管理下方的今日统计可以查看哪个号漏约课、漏评价",
     		url:"",
-    		autoDismiss:true,
+    		autoDismiss:false,
     		autoDissmissDuration:3000,
     		showIndicator:false,
-    		enable:0
+    		enable:1
     	}
     }));  
     response.end(); 
