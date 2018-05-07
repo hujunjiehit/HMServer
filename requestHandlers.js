@@ -423,6 +423,62 @@ function getHuifuPageInfo(request,response) {
 	});
 }
 
+function getYinshengbaoPageInfo(request,response) { 
+	console.log("Request handler 'getYinshengbaoPageInfo' was called."); 
+    request.setEncoding('utf-8');
+    var postData = "";
+    request.addListener("data", function (postDataChunk) {
+        postData += postDataChunk;
+    });
+
+	request.addListener("end", function () {
+        var params = querystring.parse(postData);//GET & POST  ////解释表单数据部分{name="zzl",email="zzl@sina.com"}
+    	
+        //获取SDK客户端上传的参数
+	    var action = params.action;
+	    
+	    var accountId = params.accountId;
+	    var customerId = params.customerId;
+	    var orderNo = params.orderNo;
+	    var commodityName = params.commodityName;
+	    var amount = params.amount;
+	    var responseUrl = params.responseUrl;
+	    var pageResponseUrl = params.pageResponseUrl;
+	    var mac = params.mac;
+
+	    var result;
+    
+	    result = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"'
+	    + '"http://www.w3.org/TR/html4/loose.dtd">\n'
+	    + '<html xmlns="http://www.w3.org/1999/xhtml">\n'
+	    + '<head>\n'
+	    + '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n'
+	    + '<title>在线充值</title>\n'
+	    + '</head>'
+	    + '<body>\n'
+	    + '<div class="main_title">正在加载汇付支付页面, 请稍候..</div>\n'
+	    + '<form id="alipaysubmit" name="alipaysubmit" action="'
+	    + action
+	    + '" method="POST">'
+	    + '<input type="hidden" name="accountId" value="' + accountId + '"/>'
+	    + '<input type="hidden" name="customerId" value="' + customerId + '"/>'
+	    + '<input type="hidden" name="orderNo" value="' + orderNo + '"/>'
+	    + '<input type="hidden" name="commodityName" value="' + commodityName + '"/>'
+	    + '<input type="hidden" name="amount" value="' + amount + '"/>'
+	    + '<input type="hidden" name="responseUrl" value="' + responseUrl + '"/>'
+	    + '<input type="hidden" name="pageResponseUrl" value="' + pageResponseUrl + '"/>'
+	    + '<input type="hidden" name="mac" value="' + mac + '"/>'
+	    + '<input type="submit" value="确认" style="display:none;">'
+	    + '</form>'
+	    + '<script>document.forms[' + "'alipaysubmit'" + '].submit();</script>\n'
+	    + '</body>\n'
+	    + '</html>';
+	    response.writeHead(200, {"Content-Type": "json"});  
+        response.write(JSON.stringify({status:"ok",message:result}));  
+        response.end(); 
+	});
+}
+
 function getYilianPageInfo(request,response) { 
 	console.log("Request handler 'getKuaijiePageInfo' was called."); 
     request.setEncoding('utf-8');
@@ -703,3 +759,4 @@ exports.getKuaijiePageInfo = getKuaijiePageInfo;
 exports.getHuifuPageInfo = getHuifuPageInfo;
 exports.getYilianPageInfo = getYilianPageInfo;
 exports.getLianlianPageInfo = getLianlianPageInfo;
+exports.getYinshengbaoPageInfo = getYinshengbaoPageInfo;

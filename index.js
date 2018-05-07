@@ -21,6 +21,7 @@ handle["/getKuaijiePageInfo"] = requestHandlers.getKuaijiePageInfo;
 handle["/getHuifuPageInfo"] = requestHandlers.getHuifuPageInfo;
 handle["/getYilianPageInfo"] = requestHandlers.getYilianPageInfo;
 handle["/getLianlianPageInfo"] = requestHandlers.getLianlianPageInfo;
+handle["/getYinshengbaoPageInfo"] = requestHandlers.getYinshengbaoPageInfo;
 
 handle["/login"] = bmobHelper.login;
 
