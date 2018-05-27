@@ -629,6 +629,7 @@ function getConfigs(request,response) {
     	minConfigTime:"0",
     	enableGiveCoins:0,
     	maxCourses:200,
+    	enableTimeOver:true,
     	notice:{
     		content:"小号管理下方的今日统计可以查看哪个号漏约课、漏评价",
     		url:"",
