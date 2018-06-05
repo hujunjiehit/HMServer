@@ -1,0 +1,25 @@
+{
+  "name": "hmserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hujunjiehit/HMServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hujunjiehit/HMServer/issues"
+  },
+  "homepage": "https://github.com/hujunjiehit/HMServer#readme",
+  "dependencies": {
+    "local-storage": "^1.4.2",
+    "localStorage": "^1.0.3",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
